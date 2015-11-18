@@ -1,0 +1,5 @@
+<% @search_result.each do |search_result| %>
+<p><strong>Gig Name:</strong><%= schedule.gig.try(:name) %></p>
+<p><strong> Venue Name: </strong> <%= schedule.venue.try(:name) %></p>
+<p><strong>Schedule: </strong><%= schedule.human_readable_date %></p>
+<% end %>

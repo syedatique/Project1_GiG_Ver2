@@ -1,0 +1,19 @@
+<p>
+  <strong>Users Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<p>
+<strong>Schedules and Bookingss: </strong><br>
+  <% @user.schedules.each do |schedule| %>
+  <%= schedule.human_readable_date %><br>
+  <%= schedule.gig.try(:name) %><br>
+  <%= schedule.venue.try(:name) %><br>
+
+  <% end %>
+</p>

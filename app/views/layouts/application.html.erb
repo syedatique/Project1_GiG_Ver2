@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GigsApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="title text-center">
+      <h1>Festival Gigs Reservation App</h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li> <%= link_to 'Home', root_path %> </li>
+        <li><%= link_to "All Gigs", gigs_path %></li>
+        <li> <%= link_to "All Venues", venues_path %>  </li>
+        <li><%= link_to "All Schedules", schedules_path %></li>
+      </ul>
+    </div>
+    
+    <div class="container">
+      <div class="notice">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+
+      <%= render partial: "layouts/menu"%>
+    </div>
+  </div>
+
+  <header>
+    <div class="header">
+      <div class='login'>
+        <% if current_user %>
+        <li><p>Welcome back <%= current_user.email %></p></li><br>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <li><% else %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Register", new_user_registration_path %></li>
+        <li><% end %></li>
+      </div>
+    </div>
+  </header>
+  <!-- End of header -->
+
+  
+  <%= yield %>
+
+  <div id="footer">
+    <li><pre><strong>Copyright (c) 2015!    </strong></pre><li>
+      <li><pre><strong>Created by: </strong>Syed Atique    </pre></li>
+      <li><pre><strong>Contact: +44(0)420007420 </strong><a href="mailto:syed@syed.com">syed@syed.com</a></pre> <li><pre>   </pre></li></li>
+      
+    </div>
+
+  </div>
+
+</body>
+</html>

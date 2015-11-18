@@ -1,0 +1,11 @@
+<nav style="padding: 20px;">
+  <p><strong>Genre name: <%= genre.name%> </strong></p>
+
+  <ul>
+    <li><%= button_to('Show', genre_path(genre), method: :get)%></li>
+    <li><%= button_to('Edit', edit_genre_path(genre), method: :get)%></li>
+    <li><%= button_to('Delete genre', genre_path(genre), method: :delete, data:{confirm: 'Delete the genre? Are you sure?'})%></li>
+  </ul>
+</nav>
+
+

@@ -1,0 +1,27 @@
+<div class="listing-all">
+  <p><strong>Gig Name:</strong><%= @gig.name %></p>
+
+  <p><%= link_to image_tag(@gig.gig_image.medium.url) %>
+  </p>
+
+  <p><strong>Genre:</strong><%= @gig.genre.try(:name) %></p>
+
+  <p><strong>Description:</strong><%= @gig.description %></p>
+
+  <p>
+    <strong>Schedules and Venues: </strong><br>
+    <% @schedules.each do |schedule| %>
+    <%= schedule.human_readable_date %>
+    <%= schedule.venue.try(:name) %><br>
+    <% end %>
+  </p>
+
+  <div class="menu">
+    <ul>
+    <li><strong><%= link_to 'Edit', edit_gig_path(@gig) if can? :manage, Gig  %></strong></li>
+    <li><strong><%= link_to 'Back', gigs_path %></strong></li>
+    </ul>
+
+  </div>
+
+</div>

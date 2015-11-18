@@ -1,0 +1,39 @@
+<div class="container">
+  <%= form_for(@venue) do |f| %>
+  <% if @venue.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@venue.errors.count, "error") %> prohibited this venue from being saved:</h2>
+    <ul>
+      <% @venue.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div><br>
+
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :seat %>
+    <%= f.text_field :seat %>
+  </div>
+
+  <p>Choose your Gig:</p>
+  <div >
+    <%= collection_check_boxes(:venue, :gig_ids, Gig.all, :id, :name) %>
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+</div>

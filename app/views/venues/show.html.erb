@@ -1,0 +1,20 @@
+<div class="listing-all">
+  <p><strong>Venue Name:</strong><%= @venue.name %></p>
+
+  <p><strong>Address:</strong><%= @venue.address %></p>
+
+  <p><strong>Seat Number:</strong><%= @venue.seat %></p>
+
+  <p><strong>Schedules and Gigs: </strong><br>
+    <% @venue.schedules.each do |schedule| %>
+    <%= schedule.schedule %>
+    <%= schedule.gig.try(:name) %><br>
+    <% end %></p><br>
+    
+    <div class="menu">
+      <ul>
+        <li><strong><%= link_to 'Edit', edit_venue_path(@venue) if can? :manage, Venue %></strong></li>
+        <li><strong><%= link_to 'Back', venues_path %></strong></li>
+      </ul>
+    </div>
+  </div>

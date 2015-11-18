@@ -1,0 +1,18 @@
+<div class="add-link-option">
+  <%= link_to 'New Schedule', new_schedule_path if can? :manage, Schedule%>
+</div>
+
+<%= render @schedules %>
+
+<% if @bookings %>
+<div class="listing-all">
+  <h2>Your bookings</h2>
+
+  <% @bookings.each do |b| %>
+  <p><%= b.schedule.gig.try(:name) %></p>
+  <p><%= b.schedule.human_readable_date %></p>
+  <p><%= link_to "Show Booking", schedule_booking_path(b.schedule_id, b.id) %></p>
+  <% end %>
+<% end %>
+
+</div>

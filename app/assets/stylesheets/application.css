@@ -1,0 +1,177 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree
+ *= require_self
+ */
+
+/*IMage box*/
+ .avatarBox {
+   border: 1px solid #DDD;
+   width: auto;
+   height: auto;
+   -webkit-border-radius: 5%; /* Can also be 55px */
+   -moz-border-radius: 5%;
+   border-radius: 5%;
+  }
+
+ .avatarBox img {
+   /*object-fit: cover;*/
+   background-size: cover;
+   margin: 5px;
+   -webkit-border-radius: 5%; /* Can also be 50px */
+   -moz-border-radius: 5%;
+   border-radius: 5%;
+  }
+  .avatarBox img:hover {
+    opacity: 0.8;
+  }
+/*Image box end*/
+
+ body {
+    color: white;
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-link-option {
+    font-size: 200%;
+    text-align: left;
+    padding-right: 20px;
+    margin: auto;
+    width: 100%;
+}
+
+.add-link-option a {
+    color: aqua;
+}
+
+.listing {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 120%;
+    font-weight: bold;
+    color: aqua;
+}
+
+.listing-all {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-right: auto;*/
+    color: red;
+    /*border: 1px solid #6B1229;*/
+}
+.listing-all p {
+    width: 60%;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    color: #DFFF00;
+    font-size: 120%;
+    text-align: center;
+}
+
+.menu {
+    background-color: #00FF14;
+    height: 40px;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu ul li a {
+    /*line-height: 40px;*/
+    list-style-type: lower-alpha;
+    margin-right: 40px;
+    /*margin-left: 40px;*/
+    font-size: x-large;
+    text-decoration: none;
+    /*margin-left: inherit;*/
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.form {
+    display: block;
+    clear: both;
+}
+
+html { 
+  /*background: url("https://i.ytimg.com/vi/doVoWENl7Yg/maxresdefault.jpg") no-repeat center center fixed; */
+  background: url("http://i.ytimg.com/vi/ck4vXjKMIxg/maxresdefault.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#footer {
+    position: relative;
+    bottom: 10px;
+    top: 10px;
+    /*width: 100%;*/
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{ float:left; display:inline-block; margin-right: 4px;}
+
+img {
+    border: 1px solid #6B1229;
+}
+
+.login {
+ float: left;
+ width: 100%;
+ font-size: 24px;
+ color: #00FF18;
+}
+
+.login a {
+   color: aqua;
+}
+
+.title h1 {
+    color: aqua;
+    font-size: 250%;
+    font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+    text-transform: uppercase;
+    text-shadow: white -5px -10px 0.5em;
+}
+
+.notice {
+    font-size: 150%;
+    font-weight: bold;
+    color: green;
+}

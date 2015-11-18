@@ -1,0 +1,31 @@
+<div class="container">
+  <%= form_for(@gig) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :gig_image %>
+    <%= f.file_field :gig_image %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :genre_id %>
+    <%= f.select("genre_id", Genre.all.map {|c| [c.name, c.id]}, {prompt: 'Select Genre'}, html_options = {}) %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+
+</div>
