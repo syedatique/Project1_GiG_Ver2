@@ -5,13 +5,12 @@ Rails.application.routes.draw do
   devise_for :users
   resources :venues
   resources :gigs
-  
   resources :schedules do 
     resources :bookings
   end
   
   resources :genres
-  # resources :searches
+  # resources :users
 
 
 end

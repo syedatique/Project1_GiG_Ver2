@@ -46,7 +46,7 @@ group :development, :test do
   gem 'carrierwave'
   gem 'rmagick'
   # gem 'social-share-button'
-  gem 'letter_opener'
+  # gem 'letter_opener'
 end
 
 group :development do

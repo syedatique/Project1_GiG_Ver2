@@ -52,6 +52,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    color: blue;
 }
 
 .add-link-option {
@@ -150,6 +151,8 @@ html {
     height: 20px;
     margin-left: auto;
     margin-right: auto;
+    color: blue;
+    font-weight: bold;
 }
 
 li{ float:left; display:inline-block; margin-right: 4px;}
