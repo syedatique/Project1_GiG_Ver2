@@ -28,7 +28,7 @@ class SchedulesController < ApplicationController
 
   def create
     @schedule = Schedule.new(schedule_params)
-    if @schedule.schedule_exist_at_venue?(@schedule.venue_id)
+    if @schedule.schedule_not_exist_at_venue?(@schedule.venue_id)
       respond_to do |format|
         if @schedule.save
           format.html { redirect_to @schedule, notice: 'Schedule was successfully created.' }

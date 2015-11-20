@@ -11,8 +11,16 @@ class Schedule < ActiveRecord::Base
     # schedule
   end
 
-  def schedule_exist_at_venue?(venue_id)
-    Schedule.where(venue_id: venue_id).all? {|s| s.schedule != self.schedule}
+  def schedule_not_exist_at_venue?(venue_id)
+    duration = 3
+    # after_duration = (s.schedule + (duration/24.0)).strftime("%H:%M")
+    # after_duration = s.schedule.strftime("%H").to_i + duration
+    # before_duration = s.schedule.strftime("%H").to_i - duration
+
+    # before_duration = (s.schedule - (duration/24.0)).strftime("%H:%M")
+    # (before_duration..after_duration).include?(self.schedule.strftime("%H:%M"))
+
+    Schedule.where(venue_id: venue_id).all? {|s| s.schedule != self.schedule} && !Schedule.where(venue_id: venue_id).all? {|s| ((s.schedule.strftime("%H").to_i - duration)..(s.schedule.strftime("%H").to_i + duration)).include?(self.schedule.strftime("%H"))} 
   end
 
   def number_of_seat_available

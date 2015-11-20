@@ -16,7 +16,9 @@
 
 /*IMage box*/
  .avatarBox {
-   border: 1px solid #DDD;
+   /*border: 1px solid #DDD;*/
+   transform: skewX(-15deg);
+   /*transform: translate(5px,5px);*/
    width: auto;
    height: auto;
    -webkit-border-radius: 5%; /* Can also be 55px */
@@ -61,16 +63,17 @@
 }
 
 .add-link-option a {
-    color: aqua;
+    color: black;
 }
 
 .listing {
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 10px;
+/*    margin-left: auto;
+    margin-right: auto;*/
     font-size: 120%;
     font-weight: bold;
-    color: aqua;
+    color: black;
 }
 
 .listing-all {
@@ -85,7 +88,8 @@
     width: 60%;
     /*margin-right: auto;*/
     /*margin-left: auto;*/
-    color: #DFFF00;
+    /*color: #DFFF00;*/
+    color: black;
     font-size: 120%;
     text-align: center;
 }
@@ -97,6 +101,7 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+
 }
 
 .menu ul li a {
@@ -128,7 +133,9 @@
 
 html { 
   /*background: url("https://i.ytimg.com/vi/doVoWENl7Yg/maxresdefault.jpg") no-repeat center center fixed; */
-  background: url("http://i.ytimg.com/vi/ck4vXjKMIxg/maxresdefault.jpg") no-repeat center center fixed; 
+  background: url("http://www.hdwallpapers.in/download/colorful_background-1920x1200.jpg") no-repeat center center fixed;
+
+  /*background: url("http://i.ytimg.com/vi/ck4vXjKMIxg/maxresdefault.jpg") no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -155,11 +162,12 @@ img {
  float: left;
  width: 100%;
  font-size: 24px;
- color: #00FF18;
+ /*color: #00FF18;*/
+ color: black;
 }
 
 .login a {
-   color: aqua;
+   color: black;
 }
 
 .title h1 {
@@ -174,4 +182,10 @@ img {
     font-size: 150%;
     font-weight: bold;
     color: green;
+}
+
+input[type=submit] {
+  color: blue;
+  /*text-decoration: blink;*/
+  font-weight: bold;
 }
